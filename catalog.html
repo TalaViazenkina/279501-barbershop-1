@@ -8,7 +8,7 @@
 	<header class="main-header">
 		<nav class="main-navigation">
 			
-			<a class="main-header-logo" href="index.html">
+			<a class="main-header-logo" href="index.html" aria-label="Логотип барбершопа «Бородинский»">
 				<img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
 			</a>
 			
@@ -34,7 +34,52 @@
 		</ul>
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр товаров</h2>
-			<!-- Здесь будет форма -->
+			<form action="https://echo.htmlacademy.ru" method="get">
+			<fieldset class="filter-brand">
+				<legend>Производители:</legend>
+				<p class="filter-field">
+				<input type="checkbox" name="baxter-of-california" id=baxter-of-california" checked>
+				<label for="baxter-of-california">baxter of california</label>
+				</p>
+				<p class="filter-field">
+				<input type="checkbox" name="mr-natty" id="mrnatty">
+				<label for="mr-natty">mr natty</label>
+				</p>
+				<p class="filter-field">
+				<input type="checkbox" name="suavecito" id="suavecito" checked>
+				<label for="suavecito">suavecito</label>
+				</p>
+				<p class="filter-field">
+				<input type="checkbox" name="malin-goetz" id="malin-goetz">
+				<label for="malin-goetz">malin+goetz</label>
+				</p>
+				<p class="filter-field">
+				<input type="checkbox" name="murray" id="murray">
+				<label for="murray">murray</label>
+				</p>
+				<p class="filter-field">
+				<input type="checkbox" name="american-crew" id="american-crew" checked>
+				<label for="american-crew">american crew</label>
+				</p>
+			</fieldset>
+			<fieldset class="filter-product">
+				<legend>Группы товаров:</legend>
+				<p class="filter-field">
+					<input type="radio" name="product-group" id="shaving" value="shaving">
+					<label for="">Бритвенные принадлежности</label>
+				</p>
+				<p class="filter-field">
+					<input type="radio" name="product-group" id="care" value="care" checked>
+					<label for="care">Средства для ухода</label>
+				</p>
+				<p class="filter-field">
+					<input type="radio" name="product-group" id="accessories" value="accessories">
+					<label for="accessories">Аксессуары</label>
+				</p>
+				
+			</fieldset>
+			<button type="submit" class="button">Показать</button>
+			</form>
 		</section>
 		<section class="catalog">
 			<h2 class="visually-hidden">Список средств для ухода</h2>
@@ -174,10 +219,29 @@
 
 	<section class="modal modal-login">
 		<h2>Личный кабинет</h2>
-		<p>Введите свой логин и пароль.</p>
-		<!-- Здесь будет форма -->
-		<span class="modal-close">x</span>
+		<p>Введите пожалуйста свой логин и пароль.</p>
+		<form action="https://echo.htmlacademy.ru" method="post">
+			<p class="modal-login-field">
+				<label for="name" class="visually-hidden">Логин</label>
+				<input type="text" name="name" id="name" placeholder="Логин">
+			</p>
+			<p class="modal-login-field">
+				<label for="password" class="visually-hidden">Пароль</label>
+				<input type="password" name="password" id="password" placeholder="Пароль">
+			</p>
+			<p class="modal-login-field">
+				<label><input type="checkbox" name="remember" checked>Запомните меня</label>
+				<a href="#">Я забыл пароль!</a>
+			</p>
+			<button type="submit">Войти</button>
+		</form>
+		<button  class="modal-close" type="button" aria-label="Закрыть окно формы">x</span>
 	</section>
+
+	 <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <button  class="modal-close" type="button" aria-label="Закрыть карту">x</span>
+    </section>
 	
 </body>
 </html>
